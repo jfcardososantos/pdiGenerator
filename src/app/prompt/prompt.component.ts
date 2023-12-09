@@ -20,9 +20,9 @@ export class PromptComponent implements OnInit {
   prompt2: any = "";
   prompt3: any = "As habilidades desenvolvidas foram:";
   prompt4: any = "";
-
   prompt5: any = "Deixe o texto impessoal e no pretérito, como se o estudante já tivesse trabalhado. Seja sucinto, apresente atividades individualizadas com seus respectivos materiais. Sem apresentações, apenas o conteúdo. Não repita o texto que escrevi, nenhuma parte dele, apenas a metodologia de trabalho e os materiais. Não coloque em tópicos. Me dê apenas um texto descritivo longo com alguns relatos de experiência. Não esqueça de dizer dos materiais utilizados. Prefira sempre materiais adaptados ou confeccionados manualmente. Não cite os códigos de habilidade."
 
+  prompt6: any = "Diante dessas metodologias de trabalho, quais foram os aprendizados adquiridos pelo estudante no fim do bimestre? Utilize o código da habilidade, para explicar como o estudante consolidou o aprendizado. Não enumere e não separe em tópicos específicos. Não esqueça dos códigos."
   
   isCopying1 = false;
   isCopying2 = false;
@@ -37,8 +37,8 @@ export class PromptComponent implements OnInit {
   }
 
   updateResult() {
-    this.result = `${this.prompt1} ${this.prompt2} ${this.prompt3} ${this.prompt4}`;
-    this.result2 = `${this.prompt5}`
+    this.result = `${this.prompt1} ${this.prompt2} ${this.prompt3} ${this.prompt4}\n ${this.prompt5}`;
+    this.result2 = `${this.prompt6}`
   }
 
 
