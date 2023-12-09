@@ -37,7 +37,7 @@ export class PromptComponent implements OnInit {
   }
 
   updateResult() {
-    this.result = `${this.prompt1} ${this.prompt2} ${this.prompt3} ${this.prompt4}\n ${this.prompt5}`;
+    this.result = `${this.prompt1} ${this.prompt2} ${this.prompt3} ${this.prompt4} ${this.prompt5}`;
     this.result2 = `${this.prompt6}`
   }
 

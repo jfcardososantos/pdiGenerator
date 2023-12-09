@@ -34,9 +34,9 @@
 </button>
 <br>
 <h2>- Prompt 2 -</h2>
-<textarea  (input)="updateResult()" [(ngModel)]="result2" style="color: red;" name="p3" id="p3" cols="30" rows="10"></textarea>
-
-<div class="buttons" >
+<textarea  (input)="updateResult()" [(ngModel)]="result2" style="color: red;" name="p3" id="p3" cols="30" rows="10">
+</textarea>
+<div class="buttons">
 
 
   <button class="copy" (click)="copyValues2()" [class.copying]="isCopying2" [disabled]="isCopying2">
