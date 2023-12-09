@@ -1,0 +1,49 @@
+<section>
+    <div class="left-side">
+    <div class="info-inicial">    
+        <h1>Prompt para PDI</h1>
+        <p>Os textos dos comandos são editáveis também, eles estão em vermelho, caso vocês precisem alterar alguma coisa, pode alterar.</p>
+      </div>
+
+      <div class="input-areas">
+    <p>Aqui vai o texto inicial:</p>
+    <textarea  (input)="updateResult()" [(ngModel)]="prompt1" style="color: red;" name="p1" id="p1" cols="30" rows="4"></textarea>
+    <br>
+    <textarea (input)="updateResult()" [(ngModel)]="prompt2" style="color: green" name="p2" id="p2" cols="30" rows="10"
+      placeholder="Cole aqui o conteúdo da coluna 1 (Qual o conteúdo será trabalhado na disciplina?)"></textarea>
+    <br>
+    <textarea  (input)="updateResult()" [(ngModel)]="prompt3" style="color: red;" name="p3" id="p3" cols="30" rows="2">As habilidades desenvolvidas foram:</textarea>
+    <br>
+    <textarea (input)="updateResult()" [(ngModel)]="prompt4" style="color: green;" name="p4" id="p4" cols="30" rows="10"
+      placeholder="Cole aqui o conteúdo da coluna 2 (Qual a habilidade a ser construída/desenvolvida?)"></textarea>
+    </div>
+
+      <br>
+
+      <div >
+    <button class="botao" (click)="clearValues()">Limpar</button>
+</div>
+</div>
+    
+<div class="right-side">
+<h2>- Prompt 1 -</h2>    
+    <div class="resultado">{{result}}</div>
+<br>
+<button class="copy" (click)="copyValues1()" [class.copying]="isCopying1" [disabled]="isCopying1">
+  {{ isCopying1 ? 'Copiado' : 'Copiar prompt 1' }}
+</button>
+<br>
+<h2>- Prompt 2 -</h2>
+<textarea  (input)="updateResult()" [(ngModel)]="result2" style="color: red;" name="p3" id="p3" cols="30" rows="10"></textarea>
+
+<div class="buttons" >
+
+
+  <button class="copy" (click)="copyValues2()" [class.copying]="isCopying2" [disabled]="isCopying2">
+    {{ isCopying2 ? 'Copiado' : 'Copiar prompt 2' }}
+  </button>
+
+</div>
+</div> 
+</section>
+  
